@@ -25,29 +25,29 @@ task main()
 {
   while (true)
   {
-		getJoystickSettings(joystick);
-	  if (abs (joystick.joy1_y1) > 10)
-	  {
-		  getJoystickSettings(joystick);
-		  motor[nxtA] = joystick.joy1_y1 + joystick.joy1_x1;
-		  motor[nxtB] = joystick.joy1_y1 - joystick.joy1_x1;
-	  }
-	  else
+	getJoystickSettings(joystick);
+	if (abs (joystick.joy1_y1) > 10)
+		{
+			getJoystickSettings(joystick);
+			motor[nxtA] = joystick.joy1_y1 + joystick.joy1_x1;
+			motor[nxtB] = joystick.joy1_y1 - joystick.joy1_x1;
+	}
+	else
 		{
 			motor[nxtA] = 0;
-		  motor[nxtB] = 0;
+		 	motor[nxtB] = 0;
 		}
 
-		if (abs (joystick.joy1_y2) > 10)
-	  {
-		  getJoystickSettings(joystick);
-		  motor[nxtA] = joystick.joy1_y2 ;
-		  motor[nxtB] = joystick.joy1_y2 * -1;
-	  }
-	  else
+	if (abs (joystick.joy1_y2) > 10)
+		{
+			getJoystickSettings(joystick);
+		  	motor[nxtA] = joystick.joy1_y2 ;
+		  	motor[nxtB] = joystick.joy1_y2 * -1;
+	  	}
+	else
 		{
 			motor[nxtA] = 0;
-		  motor[nxtB] = 0;
+			motor[nxtB] = 0;
 		}
   }
 }
