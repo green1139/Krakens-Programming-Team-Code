@@ -52,7 +52,6 @@ task main()
 		  motor[DriveB] = 0;
 		  nxtDisplayString(2, "Joy1 Y1 < threshold = 10");
 		}
-
 		if (abs (joystick.joy1_y2) > SpinThreshold)
 	  {
 		  getJoystickSettings(joystick);
@@ -85,21 +84,9 @@ task main()
 			motor[DriveB] = 0;
 		}
 
-		//For the movement of the servo
-		if (joy2Btn(4))
-		{
-			servo[LifterServo] -=10;
-			nxtDisplayString(4, "Joy2B4 Pressed");
-		}
-		else if (joy2Btn(1))
-		{
-			servo[LifterServo] += 10;
-			nxtDisplayString(4, "Joy2B1 Pressed");
-		}
-
-		//For the movement of the ScissorLift-Lifting motor: LiftA ----- *SINGLE MOTOR*
+		//For the movement of the ScissorLift Lifting motor: LiftA ----- *SINGLE MOTOR*
 		/*
-		if (joy2_TopHat == )
+		if (joy2_TopHat == 0)
 		{
 			motor[LiftA] = 100;
 			nxtDisplayString(4, "POV UP");
